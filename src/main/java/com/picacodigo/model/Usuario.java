@@ -28,8 +28,9 @@ public class Usuario implements Serializable{
     @Basic(optional = false)
     @Column(name = "password")
     private String password;
-    @JoinColumn(name = "idpersona", referencedColumnName = "idpersona")
-    @ManyToOne(optional = false)
+    
+    @JoinColumn(name = "idpersona")
+    @ManyToOne
     private Persona idpersona;
 
     public Integer getIdusuario() {
