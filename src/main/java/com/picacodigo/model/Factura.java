@@ -34,11 +34,11 @@ public class Factura implements Serializable{
     @Basic(optional = false)
     @Column(name = "total")
     private double total;
-    @JoinColumn(name = "idinmueble", referencedColumnName = "idinmueble")
-    @ManyToOne(optional = false)
+    
+    @JoinColumn(name = "idinmueble")
+    @ManyToOne
     private Inmueble idinmueble;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "idfactura")
-    private List<Pago> pagoList;
+    
 
     public Integer getIdfactura() {
         return idfactura;
@@ -80,11 +80,4 @@ public class Factura implements Serializable{
         this.idinmueble = idinmueble;
     }
 
-    public List<Pago> getPagoList() {
-        return pagoList;
-    }
-
-    public void setPagoList(List<Pago> pagoList) {
-        this.pagoList = pagoList;
-    }
 }
