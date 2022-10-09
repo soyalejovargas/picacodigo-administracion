@@ -25,10 +25,13 @@ public class Pago implements Serializable{
     @Basic(optional = false)
     @Column(name = "estado")
     private short estado;
-    @JoinColumn(name = "idfactura", referencedColumnName = "idfactura")
-    @ManyToOne(optional = false)
+    
+    @JoinColumn(name = "idfactura")
+    @ManyToOne
     private Factura idfactura;
 
+    
+    
     public Integer getIdpago() {
         return idpago;
     }
