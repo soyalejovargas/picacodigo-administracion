@@ -22,14 +22,17 @@ public class Evento implements Serializable {
 	@Basic(optional = false)
 	@Column(name = "idevento")
 	private Integer idevento;
+	
 	@Basic(optional = false)
 	@Column(name = "descripcion")
 	private String descripcion;
-	@JoinColumn(name = "idconjunto", referencedColumnName = "idconjunto")
-	@ManyToOne(optional = false)
+	
+	@JoinColumn(name = "idconjunto")
+	@ManyToOne
 	private Conjunto idconjunto;
-	@JoinColumn(name = "idpersona", referencedColumnName = "idpersona")
-	@ManyToOne(optional = false)
+	
+	@JoinColumn(name = "idpersona")
+	@ManyToOne
 	private Persona idpersona;
 
 	public Integer getIdevento() {
