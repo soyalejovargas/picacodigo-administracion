@@ -9,7 +9,7 @@ import com.picacodigo.model.Persona;
 
 public interface PersonaRepository extends JpaRepository<Persona, Integer>{
 	
-	@Query(value = "SELECT * FROM persona p WHERE p.id = :id", nativeQuery = true)
+	@Query(value = "SELECT * FROM persona p WHERE p.idpersona = :id", nativeQuery = true) //cambie id por idpersona
 	public List<Persona> findAdminById(Integer id);
 	
 

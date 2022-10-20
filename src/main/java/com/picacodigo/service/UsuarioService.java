@@ -11,6 +11,7 @@ public interface UsuarioService {
 	public List<Usuario> findAll();
 	public Page<Usuario> findAll(Pageable paginable);
 	public Optional<Usuario> findById(Integer id);
+	public List<Usuario> findAdminById(Integer id);
 	public Usuario save(Usuario usuario);
 	public void deleteById(Integer id);
 	

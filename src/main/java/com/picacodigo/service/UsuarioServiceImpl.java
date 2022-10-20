@@ -9,6 +9,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.picacodigo.model.Persona;
 import com.picacodigo.model.Usuario;
 import com.picacodigo.repository.UsuarioRepository;
 
@@ -46,6 +47,12 @@ public class UsuarioServiceImpl implements UsuarioService {
 	@Transactional
 	public void deleteById(Integer id) {
 		usuarioRepository.deleteById(id);
+	}
+	
+	@Override
+	public List<Usuario> findAdminById(Integer id) {
+		List<Usuario> usuarios = usuarioRepository.findAdminById(id);
+		return usuarios;
 	}
 
 }
