@@ -48,4 +48,9 @@ public class UsuarioServiceImpl implements UsuarioService {
 		usuarioRepository.deleteById(id);
 	}
 
+	@Override
+	public List<Usuario> verificacionUsuario(String pass, String user) {
+		return usuarioRepository.loguearse(pass, user);
+	}
+
 }

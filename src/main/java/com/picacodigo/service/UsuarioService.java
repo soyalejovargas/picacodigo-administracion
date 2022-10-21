@@ -13,5 +13,5 @@ public interface UsuarioService {
 	public Optional<Usuario> findById(Integer id);
 	public Usuario save(Usuario usuario);
 	public void deleteById(Integer id);
-	
+	public List<Usuario> verificacionUsuario(String pass, String user);
 }
